@@ -1,10 +1,12 @@
-﻿namespace PIT2022.Ex;
-
-public class EventExampleStart
+﻿namespace PIT2022.Ex
 {
-    public static void Start()
+
+    public class EventExampleStart
     {
-        EventManager.Instance.ResolveEvent<PlayerWasDeadEvent>().Invoke(new Player("myEnemy"));
-        EventManager.Instance.ResolveEvent<GameOverEvent>().Invoke();
+        public static void Start()
+        {
+            EventManager.Instance.ResolveEvent<PlayerWasDeadEvent>().Invoke(new Player("myEnemy"));
+            EventManager.Instance.ResolveEvent<GameOverEvent>().Invoke();
+        }
     }
 }

@@ -1,36 +1,38 @@
-﻿namespace PIT2022.Ex.GenericRockets;
-
-public class Spaceport<T> where T : IRocket
+﻿namespace PIT2022.Ex.GenericRockets
 {
-    private List<T> _rockets = new List<T>();
 
-    public void AddRocket(T r)
+    public class Spaceport<T> where T : IRocket
     {
-        _rockets.Add(r);
-    }
+        private List<T> _rockets = new List<T>();
 
-    public void TestAllByType<U>() where U : T
-    {
-        foreach (var rocket in _rockets)
+        public void AddRocket(T r)
         {
-            if (rocket is U)
-            {
-                try
-                {
-                    rocket.TakeOf();
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e);
-                }
+            _rockets.Add(r);
+        }
 
-                try
+        public void TestAllByType<U>() where U : T
+        {
+            foreach (var rocket in _rockets)
+            {
+                if (rocket is U)
                 {
-                    rocket.Land();
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e);
+                    try
+                    {
+                        rocket.TakeOf();
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e);
+                    }
+
+                    try
+                    {
+                        rocket.Land();
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e);
+                    }
                 }
             }
         }

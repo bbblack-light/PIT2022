@@ -1,7 +1,9 @@
-﻿namespace PIT2022.Ex.GenericRockets;
-
-public interface IRocket
+﻿namespace PIT2022.Ex.GenericRockets
 {
-    public void TakeOf();
-    public void Land();
+
+    public interface IRocket
+    {
+        public void TakeOf();
+        public void Land();
+    }
 }

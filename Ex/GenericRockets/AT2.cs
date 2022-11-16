@@ -1,14 +1,16 @@
-﻿namespace PIT2022.Ex.GenericRockets;
-
-public class AT2 : AtomicRocket
+﻿namespace PIT2022.Ex.GenericRockets
 {
-    public override void TakeOf()
-    {
-        Console.WriteLine("AT2 take of");
-    }
 
-    public override void Land()
+    public class AT2 : AtomicRocket
     {
-        Console.WriteLine("AT2 land");
+        public override void TakeOf()
+        {
+            Console.WriteLine("AT2 take of");
+        }
+
+        public override void Land()
+        {
+            Console.WriteLine("AT2 land");
+        }
     }
 }

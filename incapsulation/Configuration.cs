@@ -1,39 +1,42 @@
-﻿namespace PIT2022;
-
-public class Configuration
+﻿namespace PIT2022
 {
-   public string Command
+
+   public class Configuration
    {
-      get
+      public string Command
       {
-         if (_command == "")
+         get
          {
-            _command = "Command from file";// load file: File.Open("...").ReadAllText();
+            if (_command == "")
+            {
+               _command = "Command from file"; // load file: File.Open("...").ReadAllText();
+            }
+
+            return _command;
          }
-         return _command;
+         set
+         {
+            _command = value;
+            //File.Open("...").WriteAllText(newCommand);
+         }
       }
-      set
-      {
-         _command = value;
-         //File.Open("...").WriteAllText(newCommand);
-      }
-   }
 
-   private string _command;
+      private string _command;
 
-   public string GetCommand()
-   {
-      if (Command == "")
+      public string GetCommand()
       {
-         Command = "Command from file";/// load file: File.Open("...").ReadAllText();
+         if (Command == "")
+         {
+            Command = "Command from file"; /// load file: File.Open("...").ReadAllText();
+         }
+
+         return Command;
       }
-   
-      return Command;
+
+      // public void SetCommand(string newCommand)
+      // {
+      //    Command = newCommand;
+      //    //File.Open("...").WriteAllText(newCommand);
+      // }
    }
-   
-   // public void SetCommand(string newCommand)
-   // {
-   //    Command = newCommand;
-   //    //File.Open("...").WriteAllText(newCommand);
-   // }
 }

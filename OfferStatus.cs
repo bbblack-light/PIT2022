@@ -1,6 +1,11 @@
-﻿namespace PIT2022;
-
-public enum OfferStatus
+﻿namespace PIT2022
 {
-    ON_REVIEW, APPROVED, REJECTED, DELETED
+
+    public enum OfferStatus
+    {
+        ON_REVIEW,
+        APPROVED,
+        REJECTED,
+        DELETED
+    }
 }

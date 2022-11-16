@@ -1,23 +1,26 @@
-﻿namespace PIT2022.Ex.GenericRockets;
-
-public class P2 : PetrolRocket
+﻿namespace PIT2022.Ex.GenericRockets
 {
-    private Random r = new Random();
-    private bool _isDestroyed;
 
-    public override void TakeOf()
+    public class P2 : PetrolRocket
     {
-        if (r.Next(0, 2) == 1)
+        private Random r = new Random();
+        private bool _isDestroyed;
+
+        public override void TakeOf()
         {
-            _isDestroyed = true;
-            throw new Exception("Rocket was destroyed");
-        }
-        base.TakeOf();
-    }
+            if (r.Next(0, 2) == 1)
+            {
+                _isDestroyed = true;
+                throw new Exception("Rocket was destroyed");
+            }
 
-    public override void Land()
-    {
-        if (_isDestroyed) throw new Exception("Rocket was destroyed when take of");
-        base.Land();
+            base.TakeOf();
+        }
+
+        public override void Land()
+        {
+            if (_isDestroyed) throw new Exception("Rocket was destroyed when take of");
+            base.Land();
+        }
     }
 }

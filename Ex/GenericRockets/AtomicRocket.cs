@@ -1,14 +1,15 @@
-﻿namespace PIT2022.Ex.GenericRockets;
-
-public abstract class AtomicRocket : IRocket
+﻿namespace PIT2022.Ex.GenericRockets
 {
-    public virtual void TakeOf()
+    public abstract class AtomicRocket : IRocket
     {
-        Console.WriteLine("Atomic rocket take of");
-    }
+        public virtual void TakeOf()
+        {
+            Console.WriteLine("Atomic rocket take of");
+        }
 
-    public virtual void Land()
-    {
-        Console.WriteLine("Atomic rocket land");
+        public virtual void Land()
+        {
+            Console.WriteLine("Atomic rocket land");
+        }
     }
 }

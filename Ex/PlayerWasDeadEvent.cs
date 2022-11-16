@@ -1,20 +1,22 @@
-﻿namespace PIT2022.Ex;
-
-public class PlayerWasDeadEvent : BaseEvent<Player>
+﻿namespace PIT2022.Ex
 {
-    public override void Invoke(Player obj)
+
+    public class PlayerWasDeadEvent : BaseEvent<Player>
     {
-        base.Invoke(obj);
-        Console.WriteLine("aaaaaaaaaaaa");
+        public override void Invoke(Player obj)
+        {
+            base.Invoke(obj);
+            Console.WriteLine("aaaaaaaaaaaa");
+        }
     }
-}
 
-public class Player
-{
-    public string Username;
-
-    public Player(string username)
+    public class Player
     {
-        Username = username;
+        public string Username;
+
+        public Player(string username)
+        {
+            Username = username;
+        }
     }
 }

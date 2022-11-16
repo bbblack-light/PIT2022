@@ -1,6 +1,8 @@
-﻿namespace PIT2022;
-
-public class BaseEntity
+﻿namespace PIT2022
 {
-    public long Id;
+
+    public class BaseEntity
+    {
+        public long Id;
+    }
 }

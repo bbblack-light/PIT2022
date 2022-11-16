@@ -1,16 +1,18 @@
-﻿namespace PIT2022.Ex;
-
-public class Human
+﻿namespace PIT2022.Ex
 {
-    public readonly string Name;
 
-    public Human(string name)
+    public class Human
     {
-        Name = name;
-    }
+        public readonly string Name;
 
-    public override string ToString()
-    {
-        return Name;
+        public Human(string name)
+        {
+            Name = name;
+        }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

@@ -1,6 +1,8 @@
-﻿namespace PIT2022.Ex;
-
-public class GameOverEvent : BaseEvent
+﻿namespace PIT2022.Ex
 {
-    
+
+    public class GameOverEvent : BaseEvent
+    {
+
+    }
 }

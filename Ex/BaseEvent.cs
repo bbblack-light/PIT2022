@@ -1,17 +1,19 @@
-﻿namespace PIT2022.Ex;
-
-public abstract class BaseEvent
+﻿namespace PIT2022.Ex
 {
-    public virtual void Invoke()
+
+    public abstract class BaseEvent
     {
-        Console.WriteLine("Base event");
+        public virtual void Invoke()
+        {
+            Console.WriteLine("Base event");
+        }
     }
-}
 
-public abstract class BaseEvent<T> : BaseEvent
-{
-    public virtual void Invoke(T obj)
+    public abstract class BaseEvent<T> : BaseEvent
     {
-        Console.WriteLine("Base event with generic");
+        public virtual void Invoke(T obj)
+        {
+            Console.WriteLine("Base event with generic");
+        }
     }
 }

@@ -1,6 +1,8 @@
-﻿namespace PIT2022;
-
-public class Employer : BaseEntity
+﻿namespace PIT2022
 {
-    
+
+    public class Employer : BaseEntity
+    {
+
+    }
 }
